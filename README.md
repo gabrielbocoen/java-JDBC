@@ -9,5 +9,6 @@ Neste curso, aprendemos que (by João Victor):
 - JDBC significa Java DataBase Conectivity. JDBC define uma camada de abstração entre a sua aplicação e o driver do banco de dados. Essa camada possui, na sua grande maioria, interfaces que o driver implementa;
 - Para abrir uma conexão, devemos usar o método getConnection, da classe DriverManager. O método getConnection recebe uma string de conexão JDBC, que define a URL, usuário, senha, etc;
 - Para simplificar e encapsular a criação da conexão, devemos usar uma classe ConnectionFactory. A classe ConnectionFactory segue o padrão de criação Factory Method. O Factory Method encapsula a criação de um objeto;
-- Para executar um comando SQL, podemos usar a interface java.sql.Statement. O método execute envia o comando para o banco de dados. Dependendo do comando SQL, podemos recuperar a chave primária ou os registros selecionados.
-
+- Para executar um comando SQL, podemos usar a interface java.sql.Statement. O método execute envia o comando para o banco de dados. Dependendo do comando SQL, podemos recuperar a chave primária ou os registros selecionados;
+- Ao executar SQL como Statement, temos um risco de segurança, chamado de SQL Injection. SQL Injection nada mais é do que passar um novo comando SQL como parâmetro;
+- Para evitar SQL Injection, devemos usar a interface PreparedStatement. Diferentemente do Statement, o PreparedStatement trata (sanitiza) cada parâmetro do comando SQL.
