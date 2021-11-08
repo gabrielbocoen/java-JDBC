@@ -14,4 +14,9 @@ Neste curso, aprendemos que (by João Victor):
 - Para evitar <i>SQL Injection</i>, devemos usar a interface <b>PreparedStatement</b>. Diferentemente do <b>Statement</b>, o <b>PreparedStatement</b> trata (sanitiza) cada parâmetro do comando SQL;
 - O banco de dados oferece um recurso chamado de <b>transação</b>, para juntar várias alterações como unidade de trabalho. Se uma alteração falha, nenhuma alteração é aplicada (é feito um <b>rollback</b> da transação). Todas as alterações precisam funcionar para serem aceitas (é feito um <b>commit</b>);
 - <b>commit</b> e <b>rollback</b> são operações clássicas de transações;
-- Para garantir o fechamento dos recursos, existe no Java uma cláusula <i>try-with-resources</i>. O recurso em questão deve usar a interface <b>Autoclosable</b>.
+- Para garantir o fechamento dos recursos, existe no Java uma cláusula <i>try-with-resources</i>. O recurso em questão deve usar a interface <b>Autoclosable</b>;
+- É boa prática usar um <b><i>pool</i> de conexões</b>;
+- Um <i>pool</i> de conexões administra/controla a quantidade de conexões abertas. Normalmente tem um mínimo e máximo de conexões;
+- Como existe uma interface que representa a conexão (<b>java.sql.Connection</b>), também existe uma interface que representa o <i>pool</i> de conexões (<b>javax.sql.DataSource</b>);
+- <b>C3PO</b> é uma implementação Java de um <i>pool</i> de conexão;
+- 
