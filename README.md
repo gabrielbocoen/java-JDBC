@@ -19,4 +19,5 @@ Neste curso, aprendemos que (by João Victor):
 - Um <i>pool</i> de conexões administra/controla a quantidade de conexões abertas. Normalmente tem um mínimo e máximo de conexões;
 - Como existe uma interface que representa a conexão (<b>java.sql.Connection</b>), também existe uma interface que representa o <i>pool</i> de conexões (<b>javax.sql.DataSource</b>);
 - <b>C3PO</b> é uma implementação Java de um <i>pool</i> de conexão;
-- 
+- Para cada tabela de domínio, temos uma classe de domínio. Por exemplo, a tabela <b>produtos</b> tem uma classe <b>Produto</b> associada. Objetos dessa classe representa um registro na tabela;
+- Para acessar a tabela, usaremos um padrão chamado <b><i>Data Access Object</i> (DAO)</b>. Para cada classe de domínio, existe um DAO. Por exemplo, a classe <b>Produto</b> possui um <b>ProdutoDao</b>. Todos os métodos JDBC relacionados com o produto devem estar encapsulados no <b>ProdutoDao</b>.
