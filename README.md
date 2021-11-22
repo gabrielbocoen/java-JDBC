@@ -26,5 +26,6 @@ Neste curso, aprendemos que (by João Victor):
 - Uma aplicação é escrita em camadas. Camadas clássicas são <i>view, controller, modelo e persistência;</i>
 - o fluxo entre as camadas segue a ordem:
 <h6>view <--> controller <--> persistencia</h6>
+  
 - Nesse curso focamos na camada de persistência;
 - Uma camada não deve deixar "vazar" detalhes da implementação (por exemplo uma exceção como <b>SQLException</b>).
