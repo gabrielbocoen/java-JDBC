@@ -22,4 +22,9 @@ Neste curso, aprendemos que (by João Victor):
 - Para cada tabela de domínio, temos uma classe de domínio. Por exemplo, a tabela <b>produtos</b> tem uma classe <b>Produto</b> associada. Objetos dessa classe representa um registro na tabela;
 - Para acessar a tabela, usaremos um padrão chamado <b><i>Data Access Object</i> (DAO)</b>. Para cada classe de domínio, existe um DAO. Por exemplo, a classe <b>Produto</b> possui um <b>ProdutoDao</b>. Todos os métodos JDBC relacionados com o produto devem estar encapsulados no <b>ProdutoDao</b>;
 - Que quando temos um relacionamento, é preciso ter cuidado para não cair no problema de <i>queries</i> <b>N + 1</b>. <b>N + 1</b> significa executar uma <i>query</i> e mais uma nova <i>query</i> (<b>N</b>) para cada relacionamento. <i>Queries</i> <b>N + 1</b> podem gerar um problema no desempenho. <i>Queries</i> <b>N + 1</b> podem ser evitadas através de <i>joins</i> no SQL;
-- A criar a nossa própria camada de persistência.
+- A criar a nossa própria camada de persistência;
+- Uma aplicação é escrita em camadas. Camadas clássicas são <i>view, controller, modelo e persistência;</i>
+- o fluxo entre as camadas segue a ordem:
+<h6>view <--> controller <--> persistencia</h6>
+- Nesse curso focamos na camada de persistência;
+- Uma camada não deve deixar "vazar" detalhes da implementação (por exemplo uma exceção como <b>SQLException</b>).
